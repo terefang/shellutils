@@ -83,6 +83,27 @@ apt-get install tint2
 
 good examples: http://dotshare.it/category/panels/tint2/
 
+#### add logout to tint
+
+addto ~/.config/tint2/tint2rc
+```
+launcher_item_app = ~/.config/tint2/oblogout.desktop
+```
+
+create ~/.config/tint2/oblogout.desktop
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=oblogout
+Icon=system-log-out
+StartupNotify=false
+Terminal=false
+Categories=System;
+Name=Log Out
+Comment=Log out of the Openbox Desktop
+```
+
 ### edit openbox menu (TODO)
 
 ~/.config/openbox/rc.xml
