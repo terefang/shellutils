@@ -68,3 +68,27 @@ google-chrome-stable \
 The & at the end is required for every command in the autostart script.
 
 Reboot, and you should see the machine automatically login and run chrome in kiosk mode.
+
+## a better kiosk
+
+### implement tint2-panel (TODO)
+
+install tint2-panel
+```
+apt-get update
+apt-get install tint2
+```
+
+~/.config/tint2/tint2rc
+
+good examples: http://dotshare.it/category/panels/tint2/
+
+### edit openbox menu (TODO)
+
+~/.config/openbox/rc.xml
+
+### add minimize all windows (TODO)
+
+wmctrl -k on
+
+xdotool key super+d
