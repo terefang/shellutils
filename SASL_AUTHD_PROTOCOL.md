@@ -1,4 +1,4 @@
-## Packet Structure
+## Packet Structure (Cyrus/SASLauthD)
 
 ```
 saslAuthRequest {
