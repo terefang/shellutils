@@ -4,7 +4,7 @@ generate random password (works with busybox)
 
 needs urandom and coreutils
 
-> tr -dc '[:alnum:]' </dev/urandom 2>/dev/null|head -c32
+> tr -dc '[:alnum:]*$!%&/' </dev/urandom 2>/dev/null|head -c32
 
 needs openssl
 
