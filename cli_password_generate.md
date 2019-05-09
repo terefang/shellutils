@@ -9,3 +9,7 @@ needs urandom and coreutils
 needs openssl
 
 > openssl rand -base64 33
+
+works with busybox
+
+> dd if=/dev/urandom count=1 bs=512 2>/dev/null|base64 -w 0|tr -c -d '0-9A-Za-z'|cut -c 1-40
