@@ -1,6 +1,6 @@
 generate random password (works with busybox)
 
-> date '+%s' | sha1sum | base64 | head -c32
+> date '+%s' | sha512sum | base64 -w 0 | head -c64
 
 needs urandom and coreutils
 
