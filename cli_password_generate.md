@@ -20,9 +20,13 @@ works with busybox
 
 echo s3cr3t | openssl passwd -stdin -6
 
+busybox mkpasswd -m sha512 s3cr3t
+
 > $6$5TAr65zLQN23ny.D$Q8FNDyXdyH1my1vDegBm13tzbY89l3ecYBP7n22frn8D.cW.4AKn38R5q9pDQbRrgq5x0IJ/lv3sRz4h2Z0SD.
 
 echo s3cr3t | openssl passwd -stdin -5
+
+busybox mkpasswd -m sha256 s3cr3t
 
 > $5$g0PUjG43Ptcj7Ooy$gR0p2F5wWzk7jEnPuYrm59.KnuvpO16JhrdE2ZgM.oC
 
@@ -32,5 +36,10 @@ echo s3cr3t | openssl passwd -stdin -apr1
 
 echo s3cr3t | openssl passwd -stdin -1
 
+busybox mkpasswd -m md5 s3cr3t
+
 > $1$4hy.ekAE$lUiQVmEMtmmfub3HSBlQu0
 
+busybox mkpasswd -m des s3cr3t
+
+> Jv03Hfq1xNoNs
