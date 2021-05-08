@@ -19,6 +19,7 @@
 | ImageMagick | Image Conversion Tool | Open-Source | Multiple | https://imagemagick.org/ |
 | xpdf/poppler-tools | various utilities | Open-Source | Multiple | part of Poppler or xpdf |
 | apache-fop | XML/FO to PDF Processor | Open-Source | Java | https://xmlgraphics.apache.org/fop/ |
+| LaTeX/LuaTeX/PdfLaTeX | TeX/LaTeX Utility Suite | Open-Source | Multiple | https://www.latex-project.org/ |
 
 ### Gui Tools
 
