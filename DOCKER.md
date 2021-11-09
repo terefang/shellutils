@@ -19,3 +19,16 @@ docker build --iidfile docker-id.txt -t someorg/somename:sometag .
 docker import - someorg/somename:sometag < rootfs.tar
 ```
 
+## run image
+
+### simple image run (remove container after exit)
+
+```sh
+docker run --rm -ti someorg/somename:sometag /cmd/inside/to/run
+```
+
+### mount outside dirs
+
+```sh
+docker run --rm -ti -v extdir1:intldir1 -v extdir2:intldir2 someorg/somename:sometag /cmd/inside/to/run
+```
