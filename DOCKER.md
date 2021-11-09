@@ -8,5 +8,5 @@ cat <<_EOF_ > ./Dockerfile
 FROM scratch
 ADD . /
 _EOF_
-docker build --iidfile docker-id.txt -t someorg/somename .
+docker build --iidfile docker-id.txt -t someorg/somename:sometag .
 ```
