@@ -30,5 +30,5 @@ docker run --rm -ti someorg/somename:sometag /cmd/inside/to/run
 ### mount outside dirs
 
 ```sh
-docker run --rm -ti -v extdir1:intldir1 -v extdir2:intldir2 someorg/somename:sometag /cmd/inside/to/run
+docker run --rm -ti -v /ext/dir1:/intl/dir1 -v /ext/dir2:/intl/dir2 someorg/somename:sometag /cmd/inside/to/run
 ```
