@@ -21,3 +21,5 @@
 
 * https://lospec.com/palette-list
 * https://colorbrewer2.org/
+
+### TODO
