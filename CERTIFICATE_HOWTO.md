@@ -88,3 +88,20 @@ openssl x509 -text -inform der -in host.crt
 
 certtool -i --inder --infile host.crt
 ```
+
+## Creating a simple CA
+
+```
+XDIR=/path/to/ca/dir
+
+cat > $XDIR/ca.tmpl <<EOT
+# X.509 Certificate options
+organization = "auth-ca"
+cn = "rootca"
+ca
+expiration_days = 3600
+EOT
+
+certtool -p --bits 2048 > $XDIR/ca.key
+certtool -s --load-ca-privkey $XDIR/ca.key --load-privkey $XDIR/ca.key --template $XDIR/ca.tmpl  > $XDIR/ca.crt
+```
