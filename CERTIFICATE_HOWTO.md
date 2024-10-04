@@ -105,3 +105,21 @@ EOT
 certtool -p --bits 2048 > $XDIR/ca.key
 certtool -s --load-ca-privkey $XDIR/ca.key --load-privkey $XDIR/ca.key --template $XDIR/ca.tmpl  > $XDIR/ca.crt
 ```
+
+## Creating a Server Cert based on CA
+
+```
+XDIR=/path/to/ca/dir
+
+cat > $XDIR/server.tmpl <<EOT
+# X.509 Certificate options
+organization = "auth-ca"
+cn = "server"
+tls_www_server
+tls_www_client
+expiration_days = 3600
+EOT
+
+certtool -p --bits 2048 > $XDIR/server.key
+certtool -c --load-ca-certificate $XDIR/ca.crt --load-ca-privkey $XDIR/ca.key --load-privkey $XDIR/server.key --template $XDIR/server.tmpl  > $XDIR/server.crt
+```
