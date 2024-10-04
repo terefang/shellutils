@@ -144,7 +144,7 @@ tls_www_client
 expiration_days = 3600
 EOT
 
-certtool -c --load-ca-certificate $XDIR/ca.crt --load-ca-privkey $XDIR/ca.key --load-privkey $XDIR/$CLIENT.key --template $XDIR/$CLIENT.tmpl  > $XDIR/$C.crt
+certtool -c --load-ca-certificate $XDIR/ca.crt --load-ca-privkey $XDIR/ca.key --load-privkey $XDIR/$CLIENT.key --template $XDIR/$CLIENT.tmpl  > $XDIR/$CLIENT.crt
 cat $XDIR/$CLIENT.crt $XDIR/$CLIENT.key > $XDIR/$CLIENT.pem
 certtool --to-p12 --outder --p12-name $CLIENT --password $CLIENT --load-ca-certificate $XDIR/ca.crt --load-certificate $XDIR/$CLIENT.crt --load-privkey $XDIR/$CLIENT.key > $XDIR/$CLIENT.p12
 ```
