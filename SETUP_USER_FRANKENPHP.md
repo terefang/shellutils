@@ -1,5 +1,7 @@
 # setup frankenphp as a user service
 
+see also: https://wiki.archlinux.org/title/Systemd/User
+
 ### directory layout
 
 ```
